@@ -32,8 +32,8 @@ def addProject(usrMail):
         else:
             projectTarget = input("invalid field, please enter your project target: ")
 ######################################################################################################################
-    projectStartDate = input("please enter your project start date in format yyyy-mm-dd: ")
     while True:
+        projectStartDate = input("please enter your project start date in format yyyy-mm-dd: ")
         if projectStartDate:
             isValidDate = True
             try:
@@ -41,13 +41,13 @@ def addProject(usrMail):
             except ValueError:
                 isValidDate = False
                 print("Input date is not valid..")
-                exit()
+                continue
             break
         else:
             projectStartDate = input("invalid field, please enter your project start date in format yyyy-mm-dd: ")
 ######################################################################################################################
-    projectEndDate = input("please enter your project end date in format yyyy-mm-dd: ")
     while True:
+        projectEndDate = input("please enter your project end date in format yyyy-mm-dd: ")
         if projectEndDate:
             isValidDate = True
             try:
@@ -55,7 +55,7 @@ def addProject(usrMail):
             except ValueError:
                 isValidDate = False
                 print("Input date is not valid..")
-                exit()
+                continue
             break
         else:
             projectEndDate = input("invalid field, please enter your project end date in format yyyy-mm-dd: ")
